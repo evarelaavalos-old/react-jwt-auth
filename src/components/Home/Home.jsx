@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './home.css';
+
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 export default function Home() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
+    <>
+      <Navbar />
+      <header>
+        <div className='smoothie'>
+          <img src={process.env.PUBLIC_URL + '/smoothie.png'} alt='' />
+        </div>
+        <div className='headings'>
+          <h2>Smoothie Recipes</h2>
+          <h3>By Ninjas For Ninjas</h3>
+          <a href='/smoothies' className='btn'>
+            View Recipes
+          </a>
+        </div>
       </header>
-    </div>
+      <Footer />
+    </>
   );
 }
