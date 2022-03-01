@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -14,9 +15,9 @@ export default function Home() {
         <div className='headings'>
           <h2>Smoothie Recipes</h2>
           <h3>By Ninjas For Ninjas</h3>
-          <a href='/smoothies' className='btn'>
+          <Link to='/smoothies' className='btn'>
             View Recipes
-          </a>
+          </Link>
         </div>
       </header>
       <Footer />

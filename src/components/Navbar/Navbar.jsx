@@ -1,27 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar({ user }) {
-  let content;
+  let content = (
+    <>
+      <li>
+        <Link to='/login'>Log in</Link>
+      </li>
+      <li>
+        <Link to='/signup' class='btn'>
+          Sign up
+        </Link>
+      </li>
+    </>
+  );
 
   if (user) {
     content = (
       <>
         <li>Welcome, {user?.email}</li>
         <li>
-          <a href='/logout'>Log out</a>
-        </li>
-      </>
-    );
-  } else {
-    content = (
-      <>
-        <li>
-          <a href='/login'>Log in</a>
-        </li>
-        <li>
-          <a href='/signup' class='btn'>
-            Sign up
-          </a>
+          <button className='logout-btn'>Log out</button>
         </li>
       </>
     );
